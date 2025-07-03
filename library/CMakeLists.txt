@@ -75,4 +75,7 @@ target_link_libraries( # Specifies the target library.
                        # included in the NDK.
                        ${log-lib} )
 
-target_link_options(openjpeg PRIVATE "-Wl,-z,separate-code")
+target_link_options(openjpeg PRIVATE
+    "-Wl,-z,max-page-size=16384"
+    "-Wl,-z,common-page-size=16384"
+)
