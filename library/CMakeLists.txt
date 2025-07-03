@@ -5,6 +5,7 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-z,separate-code")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DUSE_JPIP")
 
 # Creates and names a library, sets it as either STATIC
